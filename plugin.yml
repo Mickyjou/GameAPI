@@ -1,0 +1,6 @@
+name: GameAPI
+author: Mickyjou
+main: me.mickyjou.gameapi.Main
+version: 1.0
+commands:
+     createarena:
