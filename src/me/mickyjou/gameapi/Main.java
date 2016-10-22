@@ -13,6 +13,9 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ArenaManager.ArenaManager;
+import MySQL.PlayerStats;
+import MySQL.Ranking;
+import MySQL.Stats;
 import WorldBorder.WorldBorder;
 import listeners.BlockBreakListener;
 import listeners.BlockPlaceListener;

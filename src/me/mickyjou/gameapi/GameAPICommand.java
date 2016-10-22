@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import ArenaManager.ArenaManager;
+import MySQL.Ranking;
 
 public class GameAPICommand implements CommandExecutor {
 
@@ -15,6 +16,8 @@ public class GameAPICommand implements CommandExecutor {
 		this.plugin = main;
 	}
 
+	
+	//class to test the API
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
@@ -31,6 +34,8 @@ public class GameAPICommand implements CommandExecutor {
 				GameAPI.setArenaLobbySpawn(args[1], p);
 			}else if(args[0].equalsIgnoreCase("spawn")){
 				GameAPI.addRandomSpawn(args[1], p);
+			}else if(args[0].equalsIgnoreCase("rankingspawn")){
+				Ranking.addRankingLocation(p, args[1]);
 			}
 		}else if(args.length == 3){
 			if(args[0].equalsIgnoreCase("setteamspawn")){
